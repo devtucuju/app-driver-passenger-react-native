@@ -77,6 +77,16 @@ import com.android.build.OutputFile
  * ]
  */
 
+ project.ext.envConfigFiles = [
+  release: ".env.production",
+  debug: ".env.development",
+// Also you can different types of environments,
+  // for example staging.
+  stage: ".env.staging",
+];
+
+apply from: project(":react-native-config").projectDir.getPath() + "/dotenv.gradle"
+
 project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
 ]
@@ -131,6 +141,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
+        resValue "string", "build_config_package", "com.devsuber_passageiro"
         applicationId "com.devsuber_passageiro"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
