@@ -9,6 +9,7 @@ import {Header} from '_components/Header';
 import {TextInput} from '_components/TextInput';
 import {Button} from '_components/Button';
 import {emailValidator, passwordValidator} from '../../utils';
+import {theme} from '../../styles/theme';
 
 function Login({navigation}) {
   const dispatch = useDispatch();
@@ -107,13 +108,13 @@ const styles = StyleSheet.create({
   },
   forgot: {
     fontSize: 13,
-    color: '#CCC',
+    color: theme.colors.secondary,
   },
   link: {
     fontWeight: 'bold',
-    color: '#FFF',
+    color: theme.colors.secondary,
   },
   question: {
-    color: '#CCC',
+    color: theme.colors.secondary,
   },
 });

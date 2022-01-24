@@ -9,6 +9,7 @@ import {Header} from '_components/Header';
 import {TextInput} from '_components/TextInput';
 import {Button} from '_components/Button';
 import {emailValidator, passwordValidator, nameValidator} from '../../utils';
+import {theme} from '../../styles/theme';
 
 function Register({navigation}) {
   const dispatch = useDispatch();
@@ -84,7 +85,7 @@ function Register({navigation}) {
         Sign Up
       </Button>
       <View style={styles.row}>
-        <Text>Já é cadastrado? </Text>
+        <Text style={styles.question}>Já é cadastrado? </Text>
         <TouchableOpacity onPress={() => navigation.replace('Login')}>
           <Text style={styles.link}>Login</Text>
         </TouchableOpacity>
@@ -106,13 +107,13 @@ const styles = StyleSheet.create({
   },
   forgot: {
     fontSize: 13,
-    color: '#CCC',
+    color: theme.colors.secondary,
   },
   link: {
     fontWeight: 'bold',
-    color: '#FFF',
+    color: theme.colors.secondary,
   },
   question: {
-    color: '#CCC',
+    color: theme.colors.secondary,
   },
 });

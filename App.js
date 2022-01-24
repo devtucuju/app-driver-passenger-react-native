@@ -11,6 +11,7 @@ import {Reducers} from './src/reducers';
 import {Preload} from './src/screens/Preload';
 import {Login} from './src/screens/Login';
 import {Register} from './src/screens/Register';
+import {theme} from './src/styles/theme';
 
 const Stack = createNativeStackNavigator();
 let middleware = [];
@@ -24,7 +25,7 @@ const store = createStore(Reducers, applyMiddleware(...middleware));
 function App() {
   return (
     <Provider store={store}>
-      <PaperProvider>
+      <PaperProvider theme={theme}>
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Preload" component={Preload} />
