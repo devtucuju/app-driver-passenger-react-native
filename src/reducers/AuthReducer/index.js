@@ -2,6 +2,7 @@ const initialState = {
   email: '',
   pass: '',
   status: 0, //0 => não verificado,1 => logado, 2 => não logado
+  msg: '',
 };
 
 const AuthReducer = (state = initialState, action) => {

@@ -1,4 +1,4 @@
-import {verifyLogin} from '_services/api';
+import {verifyLogin, login} from '_services/api';
 
 export const checkLogin = () => {
   return dispatch => {
@@ -35,5 +35,34 @@ export const setPasswordField = pass => {
     payload: {
       pass,
     },
+  };
+};
+export const signIn = (email, pass) => {
+  return dispatch => {
+    login(email, pass)
+      .then(status => {
+        if (status === 2) {
+          dispatch({
+            type: 'SIGN_IN_ALERT',
+            payload: {
+              msg: 'Email e/ou senha incorretos!',
+            },
+          });
+        }
+        dispatch({
+          type: 'CHANGE_STATUS',
+          payload: {
+            status,
+          },
+        });
+      })
+      .catch(error => {
+        dispatch({
+          type: 'SIGN_IN_ERROR',
+          payload: {
+            msg: 'Tente novamente mais tarde!',
+          },
+        });
+      });
   };
 };

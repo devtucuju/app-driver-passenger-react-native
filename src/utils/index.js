@@ -19,4 +19,11 @@ function passwordValidator(password) {
   return '';
 }
 
-export {emailValidator, passwordValidator};
+function nameValidator(name) {
+  if (!name) {
+    return "Name can't be empty.";
+  }
+  return '';
+}
+
+export {emailValidator, passwordValidator, nameValidator};

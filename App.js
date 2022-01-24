@@ -10,6 +10,7 @@ import Logger from 'redux-logger';
 import {Reducers} from './src/reducers';
 import {Preload} from './src/screens/Preload';
 import {Login} from './src/screens/Login';
+import {Register} from './src/screens/Register';
 
 const Stack = createNativeStackNavigator();
 let middleware = [];
@@ -31,6 +32,11 @@ function App() {
               options={{headerShown: false}}
               name="Login"
               component={Login}
+            />
+            <Stack.Screen
+              options={{headerShown: false}}
+              name="Register"
+              component={Register}
             />
           </Stack.Navigator>
         </NavigationContainer>
