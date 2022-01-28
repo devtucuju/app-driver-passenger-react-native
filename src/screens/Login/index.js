@@ -45,6 +45,9 @@ function Login({navigation}) {
   const handleRegister = () => {
     navigation.navigate('Register');
   };
+  const handleForgot = () => {
+    navigation.navigate('Forgot');
+  };
   return (
     <Background>
       {/* <Logo /> */}
@@ -77,7 +80,7 @@ function Login({navigation}) {
       <View style={styles.forgotPassword}>
         <TouchableOpacity
           // onPress={() => navigation.navigate('ResetPasswordScreen')}
-          onPress={() => {}}>
+          onPress={handleForgot}>
           <Text style={styles.forgot}>Esqueceu a senha?</Text>
         </TouchableOpacity>
       </View>

@@ -11,6 +11,7 @@ import {Reducers} from './src/reducers';
 import {Preload} from './src/screens/Preload';
 import {Login} from './src/screens/Login';
 import {Register} from './src/screens/Register';
+import {Forgot} from './src/screens/Forgot';
 import {theme} from './src/styles/theme';
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +39,11 @@ function App() {
               options={{headerShown: false}}
               name="Register"
               component={Register}
+            />
+            <Stack.Screen
+              options={{headerShown: false}}
+              name="Forgot"
+              component={Forgot}
             />
           </Stack.Navigator>
         </NavigationContainer>

@@ -10,7 +10,7 @@ import {TextInput} from '_components/TextInput';
 import {Button} from '_components/Button';
 import {emailValidator, passwordValidator, nameValidator} from '../../utils';
 import {theme} from '../../styles/theme';
-import BackButton from '_components/BackButton';
+import {BackButton} from '_components/BackButton';
 
 function Register({navigation}) {
   const dispatch = useDispatch();
