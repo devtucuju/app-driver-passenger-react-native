@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {CommonActions, useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {checkLogin} from '_actions/AuthAction';
 import {View, StyleSheet} from 'react-native';
@@ -27,7 +27,10 @@ function Preload() {
     switch (status) {
       case 1:
         //navega para home
-        alert('navega para home');
+        navigation.reset({
+          index: 0,
+          routes: [{name: 'Navigator'}],
+        });
         break;
       case 2:
         //navega para login

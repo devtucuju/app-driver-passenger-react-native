@@ -2,16 +2,7 @@ import React, {useEffect, useCallback, useState} from 'react';
 import MapView from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import {PermissionsAndroid} from 'react-native';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Alert,
-} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, Alert} from 'react-native';
 
 const App = () => {
   const [initialPosition, setInitialPosition] = useState({
