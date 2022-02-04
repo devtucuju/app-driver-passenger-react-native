@@ -10,6 +10,7 @@ import {
   Animated,
 } from 'react-native';
 import {useSelector} from 'react-redux';
+import {SearchBox} from '_components/SearchBox';
 
 function Home() {
   // const status = useSelector(state => state.auth.status);
@@ -73,6 +74,7 @@ function Home() {
       <Animated.View style={[styles.warnbox, {height: warnHeight}]}>
         <Text style={styles.text}>{loadingMsg}</Text>
       </Animated.View>
+      <SearchBox placeholder="Para onde vamos?" />
     </SafeAreaView>
   );
 }
