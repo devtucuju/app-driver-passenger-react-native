@@ -5,7 +5,7 @@ import {checkLogin} from '_actions/AuthAction';
 import {View, StyleSheet} from 'react-native';
 import {Text} from 'react-native-paper';
 
-function Preload() {
+function Splash() {
   const dispatch = useDispatch();
   const mounted = useRef(false);
   const navigation = useNavigation();
@@ -29,7 +29,7 @@ function Preload() {
         //navega para home
         navigation.reset({
           index: 0,
-          routes: [{name: 'Navigator'}],
+          routes: [{name: 'Home'}],
         });
         break;
       case 2:
@@ -50,7 +50,7 @@ function Preload() {
     </View>
   );
 }
-export {Preload};
+export {Splash};
 
 const styles = StyleSheet.create({
   container: {

@@ -3,23 +3,27 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android:dev": "react-native run-android --variant=debug",
+    "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/geolocation": "^2.0.2",
+    "@react-navigation/drawer": "^6.4.1",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "react": "17.0.2",
     "react-native": "0.66.4",
     "react-native-config": "^1.4.5",
     "react-native-geolocation-service": "^5.3.0-beta.4",
+    "react-native-gesture-handler": "^2.4.1",
     "react-native-maps": "^0.29.4",
     "react-native-paper": "^4.11.2",
     "react-native-permissions": "^3.2.0",
+    "react-native-reanimated": "^2.8.0",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.2",
     "react-native-status-bar-height": "^2.6.0",
@@ -27,6 +31,7 @@
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1"
   },
   "devDependencies": {

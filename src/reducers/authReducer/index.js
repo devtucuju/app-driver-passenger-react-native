@@ -5,7 +5,7 @@ const initialState = {
   msg: '',
 };
 
-const AuthReducer = (state = initialState, action) => {
+const authReducer = (state = initialState, action) => {
   if (action.type === 'CHANGE_EMAIL') {
     return {...state, email: action.payload.email};
   }
@@ -22,4 +22,4 @@ const AuthReducer = (state = initialState, action) => {
   return state;
 };
 
-export {AuthReducer};
+export {authReducer};

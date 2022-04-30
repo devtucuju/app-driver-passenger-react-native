@@ -53,7 +53,7 @@ function Login({navigation}) {
       {/* <Logo /> */}
       <Header>Login</Header>
       <TextInput
-        label="Email"
+        placeholder="Email"
         returnKeyType="next"
         value={email.value}
         // onChangeText={text => setEmail({value: text, error: ''})}
@@ -66,7 +66,7 @@ function Login({navigation}) {
         keyboardType="email-address"
       />
       <TextInput
-        label="Password"
+        placeholder="Password"
         returnKeyType="done"
         value={password.value}
         // onChangeText={text => setPassword({value: text, error: ''})}
